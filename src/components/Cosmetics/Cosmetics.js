@@ -1,15 +1,20 @@
 import React from "react";
-import { add } from "../../utilities/calculate";
-// import add from "../../utilities/calculate";
 
 const Cosmetics = () => {
-	const first = 23;
-	const last = 34;
-	const total = add(first, last);
+	const cosmetics = [
+		{ id: 1, name: "alta", price: 120 },
+		{ id: 2, name: "balish", price: 1020 },
+		{ id: 3, name: "malish", price: 1200 },
+		{ id: 4, name: "Palish", price: 60 },
+		{ id: 5, name: "nalish", price: 0 },
+		{ id: 6, name: "kalish", price: 20 },
+	];
 	return (
 		<div>
 			<h1>Welcome to my Cosmetics Home</h1>
-			<p>{total}</p>
+			{cosmetics.map((cosmetic) => (
+				<Cosmetics cosmetic={cosmetic} key={cosmetic.id}></Cosmetics>
+			))}
 		</div>
 	);
 };
