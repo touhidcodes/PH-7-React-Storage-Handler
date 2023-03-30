@@ -1,11 +1,12 @@
 import React from "react";
+import { addToDb } from "../../utilities/fakeDb";
 import "./Product.css";
 
 const Product = (props) => {
 	const { product, color, price, name, email, phone, id } = props.product;
 
 	const addToCart = (id) => {
-		console.log(id);
+		addToDb(id);
 	};
 	return (
 		<div className='product'>
@@ -16,8 +17,7 @@ const Product = (props) => {
 			<p>Name: {name}</p>
 			<p>Phone: {phone}</p>
 			<p>Email: {email}</p>
-			<p>Email: {id}</p>
-			<button onClick={() => addToCart(id)}>Purchase.</button>
+			<button onClick={() => addToCart(id)}>Purchase</button>
 		</div>
 	);
 };
