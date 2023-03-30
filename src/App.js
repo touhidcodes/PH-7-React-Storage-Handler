@@ -1,12 +1,12 @@
-import './App.css';
-import Cosmetics from './components/Cosmetics/Cosmetics';
+import "./App.css";
+import Products from "./components/Products/Products";
 
 function App() {
-  return (
-    <div className="App">
-      <Cosmetics></Cosmetics>
-    </div>
-  );
+	return (
+		<div className='App'>
+      <Products></Products>
+		</div>
+	);
 }
 
 export default App;
